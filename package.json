@@ -1,0 +1,54 @@
+{
+  "name": "shortcut-sensei",
+  "displayName": "Shortcut Sensei",
+  "description": "Learn VS Code keyboard shortcuts and Emmet tricks for HTML, CSS, and SCSS — with progress tracking.",
+  "version": "1.0.0",
+  "publisher": "amitgajare",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amitgajare/shortcut-sensei"
+  },
+  "icon": "icon.jpg",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": ["Education", "Other"],
+  "activationEvents": [
+    "onCommand:shortcutSensei.showRandomTip",
+    "onCommand:shortcutSensei.startLearning",
+    "onCommand:shortcutSensei.learnShortcuts",
+    "onCommand:shortcutSensei.learnEmmet"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "shortcutSensei.showRandomTip",
+        "title": "Shortcut Sensei: Show Random Tip"
+      },
+      {
+        "command": "shortcutSensei.startLearning",
+        "title": "Shortcut Sensei: Start Learning from Basic"
+      },
+      {
+        "command": "shortcutSensei.learnShortcuts",
+        "title": "Shortcut Sensei: Only Keyboard Shortcuts"
+      },
+      {
+        "command": "shortcutSensei.learnEmmet",
+        "title": "Shortcut Sensei: Only Emmet Tricks"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "node -e \"console.log('skip prepublish')\"",
+    "lint": "eslint .",
+    "test": "node ./test/runTest.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/vscode": "^1.90.0",
+    "@types/node": "^20.x",
+    "eslint": "^8.56.0"
+  }
+}
